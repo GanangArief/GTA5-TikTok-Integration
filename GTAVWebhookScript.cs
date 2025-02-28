@@ -261,11 +261,11 @@ public class GTAVWebhookScript : Script
 
                     break;
                 }
-            case "spawn_attackers":
+            case "spawn_mp_m_freemode_01":
                 {
                     if (Game.Player.Character.IsInAir)
                     {
-                        Logger.Log("Cannot spawn attacker because Player IsInAir");
+                        Logger.Log("Spawn hiking and Follow Player");
                         break;
                     }
 
@@ -276,8 +276,8 @@ public class GTAVWebhookScript : Script
 
                     for (int i = 0; i < num; i++)
                     {
-                        Logger.Log("Spawn Attacker");
-                        Attacker npc = new Attacker(command.username, false);
+                        Logger.Log("Spawn Hiking");
+                        Attacker npc = new Hiking(command.username, false);
                         npcList.Add(npc);
                     }
 
